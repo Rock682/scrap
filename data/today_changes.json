@@ -1,1 +1,702 @@
-[]
+[
+  {
+    "id": "https-www-freejobalert-com",
+    "title": "FreeJobAlert.Com",
+    "official_url": "https://www.freejobalert.com/",
+    "category": "Banks",
+    "first_seen": "2026-07-03",
+    "first_seen_time": "19:24",
+    "last_updated": "2026-07-03",
+    "last_updated_time": "19:24",
+    "current_stage": "Notification",
+    "stage_history": [
+      {
+        "stage": "Notification",
+        "date": "2026-07-03",
+        "time": "19:24",
+        "url": "https://www.freejobalert.com/"
+      }
+    ],
+    "status": "New"
+  },
+  {
+    "id": "https-www-freejobalert-com-government-jobs",
+    "title": "All India Govt Jobs",
+    "official_url": "https://www.freejobalert.com/government-jobs/",
+    "category": "Banks",
+    "first_seen": "2026-07-03",
+    "first_seen_time": "19:24",
+    "last_updated": "2026-07-03",
+    "last_updated_time": "19:24",
+    "current_stage": "Notification",
+    "stage_history": [
+      {
+        "stage": "Notification",
+        "date": "2026-07-03",
+        "time": "19:24",
+        "url": "https://www.freejobalert.com/government-jobs/"
+      }
+    ],
+    "status": "New"
+  },
+  {
+    "id": "https-www-freejobalert-com-state-government-jobs",
+    "title": "State Govt Jobs",
+    "official_url": "https://www.freejobalert.com/state-government-jobs/",
+    "category": "Banks",
+    "first_seen": "2026-07-03",
+    "first_seen_time": "19:24",
+    "last_updated": "2026-07-03",
+    "last_updated_time": "19:24",
+    "current_stage": "Notification",
+    "stage_history": [
+      {
+        "stage": "Notification",
+        "date": "2026-07-03",
+        "time": "19:24",
+        "url": "https://www.freejobalert.com/state-government-jobs/"
+      }
+    ],
+    "status": "New"
+  },
+  {
+    "id": "https-www-freejobalert-com-teaching-faculty-jobs",
+    "title": "Teaching Jobs",
+    "official_url": "https://www.freejobalert.com/teaching-faculty-jobs/",
+    "category": "Banks",
+    "first_seen": "2026-07-03",
+    "first_seen_time": "19:24",
+    "last_updated": "2026-07-03",
+    "last_updated_time": "19:24",
+    "current_stage": "Notification",
+    "stage_history": [
+      {
+        "stage": "Notification",
+        "date": "2026-07-03",
+        "time": "19:24",
+        "url": "https://www.freejobalert.com/teaching-faculty-jobs/"
+      }
+    ],
+    "status": "New"
+  },
+  {
+    "id": "https-www-freejobalert-com-engineering-jobs",
+    "title": "Engineering Jobs",
+    "official_url": "https://www.freejobalert.com/engineering-jobs/",
+    "category": "Banks",
+    "first_seen": "2026-07-03",
+    "first_seen_time": "19:24",
+    "last_updated": "2026-07-03",
+    "last_updated_time": "19:24",
+    "current_stage": "Notification",
+    "stage_history": [
+      {
+        "stage": "Notification",
+        "date": "2026-07-03",
+        "time": "19:24",
+        "url": "https://www.freejobalert.com/engineering-jobs/"
+      }
+    ],
+    "status": "New"
+  },
+  {
+    "id": "https-www-freejobalert-com-railway-jobs",
+    "title": "Railway Jobs",
+    "official_url": "https://www.freejobalert.com/railway-jobs/",
+    "category": "Banks",
+    "first_seen": "2026-07-03",
+    "first_seen_time": "19:24",
+    "last_updated": "2026-07-03",
+    "last_updated_time": "19:24",
+    "current_stage": "Notification",
+    "stage_history": [
+      {
+        "stage": "Notification",
+        "date": "2026-07-03",
+        "time": "19:24",
+        "url": "https://www.freejobalert.com/railway-jobs/"
+      }
+    ],
+    "status": "New"
+  },
+  {
+    "id": "https-www-freejobalert-com-police-defence-jobs",
+    "title": "Police/Defence Jobs",
+    "official_url": "https://www.freejobalert.com/police-defence-jobs/",
+    "category": "Banks",
+    "first_seen": "2026-07-03",
+    "first_seen_time": "19:24",
+    "last_updated": "2026-07-03",
+    "last_updated_time": "19:24",
+    "current_stage": "Notification",
+    "stage_history": [
+      {
+        "stage": "Notification",
+        "date": "2026-07-03",
+        "time": "19:24",
+        "url": "https://www.freejobalert.com/police-defence-jobs/"
+      }
+    ],
+    "status": "New"
+  },
+  {
+    "id": "https-www-freejobalert-com-latest-notifications",
+    "title": "Latest Notifications",
+    "official_url": "https://www.freejobalert.com/latest-notifications/",
+    "category": "Banks",
+    "first_seen": "2026-07-03",
+    "first_seen_time": "19:24",
+    "last_updated": "2026-07-03",
+    "last_updated_time": "19:24",
+    "current_stage": "Notification",
+    "stage_history": [
+      {
+        "stage": "Notification",
+        "date": "2026-07-03",
+        "time": "19:24",
+        "url": "https://www.freejobalert.com/latest-notifications/"
+      }
+    ],
+    "status": "New"
+  },
+  {
+    "id": "21614",
+    "title": "Upcoming Notifications",
+    "official_url": "https://www.freejobalert.com/upcoming-notifications/21614/",
+    "category": "Banks",
+    "first_seen": "2026-07-03",
+    "first_seen_time": "19:24",
+    "last_updated": "2026-07-03",
+    "last_updated_time": "19:24",
+    "current_stage": "Notification",
+    "stage_history": [
+      {
+        "stage": "Notification",
+        "date": "2026-07-03",
+        "time": "19:24",
+        "url": "https://www.freejobalert.com/upcoming-notifications/21614/"
+      }
+    ],
+    "status": "New"
+  },
+  {
+    "id": "https-www-freejobalert-com-employment-news",
+    "title": "Employment News",
+    "official_url": "https://www.freejobalert.com/employment-news/",
+    "category": "Banks",
+    "first_seen": "2026-07-03",
+    "first_seen_time": "19:24",
+    "last_updated": "2026-07-03",
+    "last_updated_time": "19:24",
+    "current_stage": "Notification",
+    "stage_history": [
+      {
+        "stage": "Notification",
+        "date": "2026-07-03",
+        "time": "19:24",
+        "url": "https://www.freejobalert.com/employment-news/"
+      }
+    ],
+    "status": "New"
+  },
+  {
+    "id": "https-www-freejobalert-com-sarkari-naukri",
+    "title": "Sarkari Naukri",
+    "official_url": "https://www.freejobalert.com/sarkari-naukri/",
+    "category": "Banks",
+    "first_seen": "2026-07-03",
+    "first_seen_time": "19:24",
+    "last_updated": "2026-07-03",
+    "last_updated_time": "19:24",
+    "current_stage": "Notification",
+    "stage_history": [
+      {
+        "stage": "Notification",
+        "date": "2026-07-03",
+        "time": "19:24",
+        "url": "https://www.freejobalert.com/sarkari-naukri/"
+      }
+    ],
+    "status": "New"
+  },
+  {
+    "id": "https-www-freejobalert-com-anganwadi-recruitment",
+    "title": "Anganwadi Recruitment",
+    "official_url": "https://www.freejobalert.com/anganwadi-recruitment/",
+    "category": "Banks",
+    "first_seen": "2026-07-03",
+    "first_seen_time": "19:24",
+    "last_updated": "2026-07-03",
+    "last_updated_time": "19:24",
+    "current_stage": "Notification",
+    "stage_history": [
+      {
+        "stage": "Notification",
+        "date": "2026-07-03",
+        "time": "19:24",
+        "url": "https://www.freejobalert.com/anganwadi-recruitment/"
+      }
+    ],
+    "status": "New"
+  },
+  {
+    "id": "https-www-freejobalert-com-government-jobs-without-exams",
+    "title": "Govt Jobs without Exams",
+    "official_url": "https://www.freejobalert.com/government-jobs-without-exams/",
+    "category": "Banks",
+    "first_seen": "2026-07-03",
+    "first_seen_time": "19:24",
+    "last_updated": "2026-07-03",
+    "last_updated_time": "19:24",
+    "current_stage": "Notification",
+    "stage_history": [
+      {
+        "stage": "Notification",
+        "date": "2026-07-03",
+        "time": "19:24",
+        "url": "https://www.freejobalert.com/government-jobs-without-exams/"
+      }
+    ],
+    "status": "New"
+  },
+  {
+    "id": "https-www-freejobalert-com-female-government-jobs",
+    "title": "Female Govt Jobs",
+    "official_url": "https://www.freejobalert.com/female-government-jobs/",
+    "category": "Banks",
+    "first_seen": "2026-07-03",
+    "first_seen_time": "19:24",
+    "last_updated": "2026-07-03",
+    "last_updated_time": "19:24",
+    "current_stage": "Notification",
+    "stage_history": [
+      {
+        "stage": "Notification",
+        "date": "2026-07-03",
+        "time": "19:24",
+        "url": "https://www.freejobalert.com/female-government-jobs/"
+      }
+    ],
+    "status": "New"
+  },
+  {
+    "id": "https-www-freejobalert-com-law-jobs",
+    "title": "Legal Govt Jobs",
+    "official_url": "https://www.freejobalert.com/law-jobs/",
+    "category": "Banks",
+    "first_seen": "2026-07-03",
+    "first_seen_time": "19:24",
+    "last_updated": "2026-07-03",
+    "last_updated_time": "19:24",
+    "current_stage": "Notification",
+    "stage_history": [
+      {
+        "stage": "Notification",
+        "date": "2026-07-03",
+        "time": "19:24",
+        "url": "https://www.freejobalert.com/law-jobs/"
+      }
+    ],
+    "status": "New"
+  },
+  {
+    "id": "https-sarkariresult-freejobalert-com",
+    "title": "Sarkari Result",
+    "official_url": "https://sarkariresult.freejobalert.com/",
+    "category": "Banks",
+    "first_seen": "2026-07-03",
+    "first_seen_time": "19:24",
+    "last_updated": "2026-07-03",
+    "last_updated_time": "19:24",
+    "current_stage": "Result",
+    "stage_history": [
+      {
+        "stage": "Result",
+        "date": "2026-07-03",
+        "time": "19:24",
+        "url": "https://sarkariresult.freejobalert.com/"
+      }
+    ],
+    "status": "New"
+  },
+  {
+    "id": "https-www-freejobalert-com-exam-results",
+    "title": "Exam Results",
+    "official_url": "https://www.freejobalert.com/exam-results/",
+    "category": "Banks",
+    "first_seen": "2026-07-03",
+    "first_seen_time": "19:24",
+    "last_updated": "2026-07-03",
+    "last_updated_time": "19:24",
+    "current_stage": "Result",
+    "stage_history": [
+      {
+        "stage": "Result",
+        "date": "2026-07-03",
+        "time": "19:24",
+        "url": "https://www.freejobalert.com/exam-results/"
+      }
+    ],
+    "status": "New"
+  },
+  {
+    "id": "https-www-freejobalert-com-cutoff-marks",
+    "title": "Cutoff Marks",
+    "official_url": "https://www.freejobalert.com/cutoff-marks/",
+    "category": "Banks",
+    "first_seen": "2026-07-03",
+    "first_seen_time": "19:24",
+    "last_updated": "2026-07-03",
+    "last_updated_time": "19:24",
+    "current_stage": "Notification",
+    "stage_history": [
+      {
+        "stage": "Notification",
+        "date": "2026-07-03",
+        "time": "19:24",
+        "url": "https://www.freejobalert.com/cutoff-marks/"
+      }
+    ],
+    "status": "New"
+  },
+  {
+    "id": "https-www-freejobalert-com-written-marks",
+    "title": "Written Marks",
+    "official_url": "https://www.freejobalert.com/written-marks/",
+    "category": "Banks",
+    "first_seen": "2026-07-03",
+    "first_seen_time": "19:24",
+    "last_updated": "2026-07-03",
+    "last_updated_time": "19:24",
+    "current_stage": "Notification",
+    "stage_history": [
+      {
+        "stage": "Notification",
+        "date": "2026-07-03",
+        "time": "19:24",
+        "url": "https://www.freejobalert.com/written-marks/"
+      }
+    ],
+    "status": "New"
+  },
+  {
+    "id": "https-www-freejobalert-com-interview-results",
+    "title": "Interview Results",
+    "official_url": "https://www.freejobalert.com/interview-results/",
+    "category": "Banks",
+    "first_seen": "2026-07-03",
+    "first_seen_time": "19:24",
+    "last_updated": "2026-07-03",
+    "last_updated_time": "19:24",
+    "current_stage": "Result",
+    "stage_history": [
+      {
+        "stage": "Result",
+        "date": "2026-07-03",
+        "time": "19:24",
+        "url": "https://www.freejobalert.com/interview-results/"
+      }
+    ],
+    "status": "New"
+  },
+  {
+    "id": "https-www-freejobalert-com-last-date-reminder",
+    "title": "Last Date Reminder",
+    "official_url": "https://www.freejobalert.com/last-date-reminder/",
+    "category": "Banks",
+    "first_seen": "2026-07-03",
+    "first_seen_time": "19:24",
+    "last_updated": "2026-07-03",
+    "last_updated_time": "19:24",
+    "current_stage": "Notification",
+    "stage_history": [
+      {
+        "stage": "Notification",
+        "date": "2026-07-03",
+        "time": "19:24",
+        "url": "https://www.freejobalert.com/last-date-reminder/"
+      }
+    ],
+    "status": "New"
+  },
+  {
+    "id": "https-www-freejobalert-com-exam-pattern",
+    "title": "Exam Pattern",
+    "official_url": "https://www.freejobalert.com/exam-pattern/",
+    "category": "Banks",
+    "first_seen": "2026-07-03",
+    "first_seen_time": "19:24",
+    "last_updated": "2026-07-03",
+    "last_updated_time": "19:24",
+    "current_stage": "Notification",
+    "stage_history": [
+      {
+        "stage": "Notification",
+        "date": "2026-07-03",
+        "time": "19:24",
+        "url": "https://www.freejobalert.com/exam-pattern/"
+      }
+    ],
+    "status": "New"
+  },
+  {
+    "id": "https-www-freejobalert-com-selection-process",
+    "title": "Selection Process",
+    "official_url": "https://www.freejobalert.com/selection-process/",
+    "category": "Banks",
+    "first_seen": "2026-07-03",
+    "first_seen_time": "19:24",
+    "last_updated": "2026-07-03",
+    "last_updated_time": "19:24",
+    "current_stage": "Notification",
+    "stage_history": [
+      {
+        "stage": "Notification",
+        "date": "2026-07-03",
+        "time": "19:24",
+        "url": "https://www.freejobalert.com/selection-process/"
+      }
+    ],
+    "status": "New"
+  },
+  {
+    "id": "https-www-freejobalert-com-previous-papers",
+    "title": "Previous Papers",
+    "official_url": "https://www.freejobalert.com/previous-papers/",
+    "category": "Banks",
+    "first_seen": "2026-07-03",
+    "first_seen_time": "19:24",
+    "last_updated": "2026-07-03",
+    "last_updated_time": "19:24",
+    "current_stage": "Notification",
+    "stage_history": [
+      {
+        "stage": "Notification",
+        "date": "2026-07-03",
+        "time": "19:24",
+        "url": "https://www.freejobalert.com/previous-papers/"
+      }
+    ],
+    "status": "New"
+  },
+  {
+    "id": "https-slate-freejobalert-com-image-resizer",
+    "title": "Image Resizer",
+    "official_url": "https://slate.freejobalert.com/image-resizer/",
+    "category": "Banks",
+    "first_seen": "2026-07-03",
+    "first_seen_time": "19:24",
+    "last_updated": "2026-07-03",
+    "last_updated_time": "19:24",
+    "current_stage": "Notification",
+    "stage_history": [
+      {
+        "stage": "Notification",
+        "date": "2026-07-03",
+        "time": "19:24",
+        "url": "https://slate.freejobalert.com/image-resizer/"
+      }
+    ],
+    "status": "New"
+  },
+  {
+    "id": "https-slate-freejobalert-com-pdf-converter-editor-convert-pdf-to-word",
+    "title": "PDF to Word Converter",
+    "official_url": "https://slate.freejobalert.com/pdf-converter-editor/convert-pdf-to-word/",
+    "category": "Banks",
+    "first_seen": "2026-07-03",
+    "first_seen_time": "19:24",
+    "last_updated": "2026-07-03",
+    "last_updated_time": "19:24",
+    "current_stage": "Notification",
+    "stage_history": [
+      {
+        "stage": "Notification",
+        "date": "2026-07-03",
+        "time": "19:24",
+        "url": "https://slate.freejobalert.com/pdf-converter-editor/convert-pdf-to-word/"
+      }
+    ],
+    "status": "New"
+  },
+  {
+    "id": "https-slate-freejobalert-com-pdf-converter-editor-convert-image-to-pdf",
+    "title": "Image to PDF Converter",
+    "official_url": "https://slate.freejobalert.com/pdf-converter-editor/convert-image-to-pdf/",
+    "category": "Banks",
+    "first_seen": "2026-07-03",
+    "first_seen_time": "19:24",
+    "last_updated": "2026-07-03",
+    "last_updated_time": "19:24",
+    "current_stage": "Notification",
+    "stage_history": [
+      {
+        "stage": "Notification",
+        "date": "2026-07-03",
+        "time": "19:24",
+        "url": "https://slate.freejobalert.com/pdf-converter-editor/convert-image-to-pdf/"
+      }
+    ],
+    "status": "New"
+  },
+  {
+    "id": "https-ai-freejobalert-com-ai-interview-tool",
+    "title": "Free AI Interview Tool",
+    "official_url": "https://ai.freejobalert.com/ai-interview-tool/",
+    "category": "Banks",
+    "first_seen": "2026-07-03",
+    "first_seen_time": "19:24",
+    "last_updated": "2026-07-03",
+    "last_updated_time": "19:24",
+    "current_stage": "Notification",
+    "stage_history": [
+      {
+        "stage": "Notification",
+        "date": "2026-07-03",
+        "time": "19:24",
+        "url": "https://ai.freejobalert.com/ai-interview-tool/"
+      }
+    ],
+    "status": "New"
+  },
+  {
+    "id": "https-www-google-com-preferences-source-q-https-www-freejobalert-com",
+    "title": "🙏Support FreeJobAlert!Add FreeJobAlertPreferred Source on Google",
+    "official_url": "https://www.google.com/preferences/source?q=https://www.freejobalert.com/",
+    "category": "Banks",
+    "first_seen": "2026-07-03",
+    "first_seen_time": "19:24",
+    "last_updated": "2026-07-03",
+    "last_updated_time": "19:24",
+    "current_stage": "Notification",
+    "stage_history": [
+      {
+        "stage": "Notification",
+        "date": "2026-07-03",
+        "time": "19:24",
+        "url": "https://www.google.com/preferences/source?q=https://www.freejobalert.com/"
+      }
+    ],
+    "status": "New"
+  },
+  {
+    "id": "2026",
+    "title": "Central Bank of India Apprentice Exam Date 2026",
+    "official_url": "https://www.freejobalert.com/articles/central-bank-of-india-apprentice-exam-date-2026-3056362",
+    "category": "Banks",
+    "first_seen": "2026-07-03",
+    "first_seen_time": "19:24",
+    "last_updated": "2026-07-03",
+    "last_updated_time": "19:24",
+    "current_stage": "Notification",
+    "stage_history": [
+      {
+        "stage": "Notification",
+        "date": "2026-07-03",
+        "time": "19:24",
+        "url": "https://www.freejobalert.com/articles/central-bank-of-india-apprentice-exam-date-2026-3056362"
+      }
+    ],
+    "status": "New"
+  },
+  {
+    "id": "3055280",
+    "title": "NPSC Civil Services Exam Syllabus 2026",
+    "official_url": "https://www.freejobalert.com/articles/npsc-civil-services-exam-syllabus-and-exam-pattern-3055280",
+    "category": "UPSC",
+    "first_seen": "2026-07-03",
+    "first_seen_time": "19:24",
+    "last_updated": "2026-07-03",
+    "last_updated_time": "19:24",
+    "current_stage": "Notification",
+    "stage_history": [
+      {
+        "stage": "Notification",
+        "date": "2026-07-03",
+        "time": "19:24",
+        "url": "https://www.freejobalert.com/articles/npsc-civil-services-exam-syllabus-and-exam-pattern-3055280"
+      }
+    ],
+    "status": "New"
+  },
+  {
+    "id": "3055178",
+    "title": "RRB Section Controller Syllabus 2026",
+    "official_url": "https://www.freejobalert.com/articles/rrb-section-controller-syllabus-and-exam-pattern-3055178",
+    "category": "Railways",
+    "first_seen": "2026-07-03",
+    "first_seen_time": "19:24",
+    "last_updated": "2026-07-03",
+    "last_updated_time": "19:24",
+    "current_stage": "Notification",
+    "stage_history": [
+      {
+        "stage": "Notification",
+        "date": "2026-07-03",
+        "time": "19:24",
+        "url": "https://www.freejobalert.com/articles/rrb-section-controller-syllabus-and-exam-pattern-3055178"
+      }
+    ],
+    "status": "New"
+  },
+  {
+    "id": "3054423",
+    "title": "UKSSSC Junior Assistant and Stenographer Syllabus 2026",
+    "official_url": "https://www.freejobalert.com/articles/uksssc-junior-assistant-and-stenographer-syllabus-and-exam-pattern-3054423",
+    "category": "SSC",
+    "first_seen": "2026-07-03",
+    "first_seen_time": "19:24",
+    "last_updated": "2026-07-03",
+    "last_updated_time": "19:24",
+    "current_stage": "Notification",
+    "stage_history": [
+      {
+        "stage": "Notification",
+        "date": "2026-07-03",
+        "time": "19:24",
+        "url": "https://www.freejobalert.com/articles/uksssc-junior-assistant-and-stenographer-syllabus-and-exam-pattern-3054423"
+      }
+    ],
+    "status": "New"
+  },
+  {
+    "id": "3053693",
+    "title": "OSSSC Nursing Officer Syllabus 2026",
+    "official_url": "https://www.freejobalert.com/articles/osssc-nursing-officer-syllabus-and-exam-pattern-3053693",
+    "category": "SSC",
+    "first_seen": "2026-07-03",
+    "first_seen_time": "19:24",
+    "last_updated": "2026-07-03",
+    "last_updated_time": "19:24",
+    "current_stage": "Notification",
+    "stage_history": [
+      {
+        "stage": "Notification",
+        "date": "2026-07-03",
+        "time": "19:24",
+        "url": "https://www.freejobalert.com/articles/osssc-nursing-officer-syllabus-and-exam-pattern-3053693"
+      }
+    ],
+    "status": "New"
+  },
+  {
+    "id": "3043477",
+    "title": "UPSSSC Lower PCS Syllabus 2026",
+    "official_url": "https://www.freejobalert.com/articles/upsssc-lower-pcs-syllabus-3043477",
+    "category": "SSC",
+    "first_seen": "2026-07-03",
+    "first_seen_time": "19:24",
+    "last_updated": "2026-07-03",
+    "last_updated_time": "19:24",
+    "current_stage": "Notification",
+    "stage_history": [
+      {
+        "stage": "Notification",
+        "date": "2026-07-03",
+        "time": "19:24",
+        "url": "https://www.freejobalert.com/articles/upsssc-lower-pcs-syllabus-3043477"
+      }
+    ],
+    "status": "New"
+  }
+]
