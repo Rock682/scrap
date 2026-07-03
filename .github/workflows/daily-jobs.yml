@@ -1,0 +1,39 @@
+name: Daily Job Alerts
+
+on:
+  schedule:
+    - cron: '30 2 * * *'   # ~8:00 AM IST
+    - cron: '30 9 * * *'   # ~3:00 PM IST
+  workflow_dispatch:        # allows manual trigger from the Actions tab
+
+jobs:
+  fetch-jobs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run scraper
+        run: python scraper.py
+
+      - name: Match and track status
+        run: python track_status.py
+
+      - name: Generate table
+        run: python generate_table.py
+
+      - name: Commit updated data
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add data/
+          git commit -m "Job alert update: $(date +'%Y-%m-%d %H:%M')" || echo "No changes to commit"
+          git push
