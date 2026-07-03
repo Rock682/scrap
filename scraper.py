@@ -1,42 +1,52 @@
 """
 scraper.py
-Fetches FreeJobAlert's sitemap(s), extracts URL + last-modified date for
-each entry, and keeps ONLY items matching your focus categories:
-SSC, UPSC, Railways, Defence, Banks, Andhra Pradesh.
+Fetches FreeJobAlert's category listing pages directly and extracts
+title + URL for each posting. Pages that map to a single category
+(bank-jobs, railway-jobs, police-defence-jobs) are tagged directly.
+Mixed pages (latest-notifications, admit-card) are filtered using
+keyword matching against your 6 focus categories: SSC, UPSC, Railways,
+Defence, Banks, Andhra Pradesh - anything else is dropped.
 
 robots.txt for freejobalert.com explicitly allows crawling (checked
-2026-07-02) and publishes these sitemaps directly, so we read structured
-data from there instead of scraping raw HTML - more stable and lighter
-on their server.
+2026-07-02).
 
-Output: raw_today.json - a flat list of {id, title, url, category, lastmod}
+Output: raw_today.json - a flat list of {id, title, url, category}
 """
 
 import json
 import re
 import time
 import requests
-from xml.etree import ElementTree
+from bs4 import BeautifulSoup
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (compatible; JobTrackerBot/1.0; +https://easyapplications.in/about-bot)"
 }
 
-SITEMAPS = [
-    "https://www.freejobalert.com/sitemap-general.xml",
-    "https://www.freejobalert.com/google-news-sitemap.xml",
+REQUEST_DELAY_SECONDS = 3  # be polite - don't hammer the server
+
+# Pages that map directly to ONE category - every link on these pages
+# is tagged with that category, no keyword filtering needed.
+DIRECT_CATEGORY_PAGES = {
+    "https://www.freejobalert.com/bank-jobs/": "Banks",
+    "https://www.freejobalert.com/railway-jobs/": "Railways",
+    "https://www.freejobalert.com/police-defence-jobs/": "Defence",
+}
+
+# Pages with a mix of everything - each link is checked against
+# CATEGORY_KEYWORDS below, and only matches to your 6 focus areas are kept.
+MIXED_PAGES = [
+    "https://www.freejobalert.com/latest-notifications/",
+    "https://www.freejobalert.com/admit-card/",
 ]
 
-REQUEST_DELAY_SECONDS = 2
-
-# Only these categories are tracked - everything else is ignored.
-# Keywords are matched against the URL slug and title (case-insensitive).
 CATEGORY_KEYWORDS = {
     "SSC": ["ssc", "staff-selection"],
     "UPSC": ["upsc", "civil-services", "capf", "cds", "nda"],
     "Railways": ["railway", "rrb", "rrc", "irctc", "ircon", "metro-rail"],
     "Defence": ["defence", "army", "navy", "air-force", "indian-army",
-                "indian-navy", "coast-guard", "bsf", "crpf", "itbp", "cisf"],
+                "indian-navy", "coast-guard", "bsf", "crpf", "itbp", "cisf",
+                "police", "ncc"],
     "Banks": ["bank", "ibps", "sbi", "rbi", "nabard", "sidbi", "cooperative-bank"],
     "Andhra Pradesh": ["andhra-pradesh", "ap-govt", "appsc", "ap-jobs", "-ap-"],
 }
@@ -50,7 +60,7 @@ def make_stable_id(url: str) -> str:
     return slug[-80:]
 
 
-def detect_category(url: str, title: str = "") -> str | None:
+def detect_category(url: str, title: str) -> str | None:
     text = f"{url} {title}".lower()
     for category, keywords in CATEGORY_KEYWORDS.items():
         if any(kw in text for kw in keywords):
@@ -58,93 +68,93 @@ def detect_category(url: str, title: str = "") -> str | None:
     return None
 
 
-def title_from_slug(url: str) -> str:
-    """Sitemaps often don't include a title, so derive a readable one
-    from the URL slug as a fallback."""
-    slug = url.rstrip("/").split("/")[-1]
-    slug = slug.replace("-", " ").strip()
-    return slug.title()
-
-
-def fetch_sitemap(url: str) -> str:
+def fetch_page(url: str) -> str:
     resp = requests.get(url, headers=HEADERS, timeout=20)
     resp.raise_for_status()
     return resp.text
 
 
-def parse_sitemap(xml_text: str) -> list:
+def extract_links(html: str) -> list:
     """
-    Handles standard <urlset> sitemaps and Google News sitemaps
-    (which include <news:title> - much better than guessing from slug).
+    NOTE: This uses a generic heuristic (table/list links with reasonably
+    long text). If results look sparse or wrong after your first run,
+    inspect the actual page HTML (right-click a job link -> Inspect) and
+    tell me the surrounding tag/class so I can tighten this selector.
     """
-    ns = {
-        "sm": "http://www.sitemaps.org/schemas/sitemap/0.9",
-        "news": "http://www.google.com/schemas/sitemap-news/0.9",
-    }
-    root = ElementTree.fromstring(xml_text)
-    entries = []
-
-    for url_el in root.findall("sm:url", ns):
-        loc_el = url_el.find("sm:loc", ns)
-        if loc_el is None or not loc_el.text:
+    soup = BeautifulSoup(html, "html.parser")
+    items = []
+    for link in soup.select("a[href]"):
+        title = link.get_text(strip=True)
+        href = link.get("href", "")
+        if not title or len(title) < 12:
             continue
-        loc = loc_el.text.strip()
-
-        lastmod_el = url_el.find("sm:lastmod", ns)
-        lastmod = lastmod_el.text.strip() if lastmod_el is not None else ""
-
-        news_el = url_el.find("news:news", ns)
-        title = ""
-        if news_el is not None:
-            title_el = news_el.find("news:title", ns)
-            if title_el is not None and title_el.text:
-                title = title_el.text.strip()
-        if not title:
-            title = title_from_slug(loc)
-
-        entries.append({"url": loc, "title": title, "lastmod": lastmod})
-
-    return entries
+        if not href.startswith("http"):
+            continue
+        if "freejobalert.com" not in href:
+            continue
+        items.append({"title": title, "url": href})
+    return items
 
 
 def main():
     all_items = []
     seen_ids = set()
 
-    for sitemap_url in SITEMAPS:
+    # 1. Direct-category pages - every matching link gets that category
+    for url, category in DIRECT_CATEGORY_PAGES.items():
         try:
-            xml_text = fetch_sitemap(sitemap_url)
-            entries = parse_sitemap(xml_text)
-            print(f"Parsed {len(entries)} entries from {sitemap_url}")
-        except (requests.RequestException, ElementTree.ParseError) as e:
-            print(f"Failed to fetch/parse {sitemap_url}: {e}")
+            html = fetch_page(url)
+            links = extract_links(html)
+            print(f"Fetched {len(links)} links from {url}")
+        except requests.RequestException as e:
+            print(f"Failed to fetch {url}: {e}")
             continue
 
-        for entry in entries:
-            category = detect_category(entry["url"], entry["title"])
-            if category is None:
-                continue  # not one of your 6 focus categories - skip
-
-            item_id = make_stable_id(entry["url"])
+        for link in links:
+            item_id = make_stable_id(link["url"])
             if item_id in seen_ids:
                 continue
             seen_ids.add(item_id)
-
             all_items.append({
                 "id": item_id,
-                "title": entry["title"],
-                "url": entry["url"],
+                "title": link["title"],
+                "url": link["url"],
                 "category": category,
-                "lastmod": entry["lastmod"],
             })
+        time.sleep(REQUEST_DELAY_SECONDS)
 
+    # 2. Mixed pages - filter by keyword to your 6 focus categories only
+    for url in MIXED_PAGES:
+        try:
+            html = fetch_page(url)
+            links = extract_links(html)
+            print(f"Fetched {len(links)} links from {url}")
+        except requests.RequestException as e:
+            print(f"Failed to fetch {url}: {e}")
+            continue
+
+        for link in links:
+            category = detect_category(link["url"], link["title"])
+            if category is None:
+                continue  # not one of your 6 focus categories - skip
+
+            item_id = make_stable_id(link["url"])
+            if item_id in seen_ids:
+                continue
+            seen_ids.add(item_id)
+            all_items.append({
+                "id": item_id,
+                "title": link["title"],
+                "url": link["url"],
+                "category": category,
+            })
         time.sleep(REQUEST_DELAY_SECONDS)
 
     with open("data/raw_today.json", "w", encoding="utf-8") as f:
         json.dump(all_items, f, ensure_ascii=False, indent=2)
 
     print(f"Total matching items (focus categories only): {len(all_items)}")
-    for cat in CATEGORY_KEYWORDS:
+    for cat in ["SSC", "UPSC", "Railways", "Defence", "Banks", "Andhra Pradesh"]:
         count = sum(1 for i in all_items if i["category"] == cat)
         print(f"  {cat}: {count}")
 
