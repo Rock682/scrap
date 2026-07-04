@@ -104,6 +104,11 @@ def main():
                 "title": title,
                 "official_url": url,
                 "category": category,
+                "board": item.get("board", ""),
+                "qualification": item.get("qualification", ""),
+                "advt_no": item.get("advt_no", ""),
+                "last_date": item.get("last_date", ""),
+                "post_date": item.get("post_date", ""),
                 "first_seen": today_str,
                 "first_seen_time": time_str,
                 "last_updated": today_str,
@@ -129,6 +134,9 @@ def main():
                 existing["last_updated"] = today_str
                 existing["last_updated_time"] = time_str
                 existing["official_url"] = url
+                # refresh these fields in case they were missing/updated
+                existing["last_date"] = item.get("last_date", existing.get("last_date", ""))
+                existing["qualification"] = item.get("qualification", existing.get("qualification", ""))
                 changes.append({**existing, "status": "Update"})
             # else: duplicate, no action, not added to changes
 
