@@ -1,16 +1,20 @@
 """
 scraper.py
-Fetches FreeJobAlert's category listing pages directly and extracts
-title + URL for each posting. Pages that map to a single category
-(bank-jobs, railway-jobs, police-defence-jobs) are tagged directly.
-Mixed pages (latest-notifications, admit-card) are filtered using
-keyword matching against your 6 focus categories: SSC, UPSC, Railways,
-Defence, Banks, Andhra Pradesh - anything else is dropped.
+Fetches FreeJobAlert's category listing pages and parses the actual data
+TABLES on each page (columns: Post Date, Recruitment Board, Post Name,
+Qualification, Advt No, Last Date, More Information/Get Details link).
+This targets real job rows only - no menu links, no junk.
+
+Pages that map to a single category (bank-jobs, railway-jobs,
+police-defence-jobs) are tagged directly. Mixed pages (latest-notifications,
+admit-card) are filtered using keyword matching against your 6 focus
+categories: SSC, UPSC, Railways, Defence, Banks, Andhra Pradesh.
 
 robots.txt for freejobalert.com explicitly allows crawling (checked
 2026-07-02).
 
-Output: raw_today.json - a flat list of {id, title, url, category}
+Output: raw_today.json - a flat list of:
+  {id, title, url, category, post_date, qualification, advt_no, last_date}
 """
 
 import json
@@ -25,30 +29,42 @@ HEADERS = {
 
 REQUEST_DELAY_SECONDS = 3  # be polite - don't hammer the server
 
-# Pages that map directly to ONE category - every link on these pages
-# is tagged with that category, no keyword filtering needed.
 DIRECT_CATEGORY_PAGES = {
     "https://www.freejobalert.com/bank-jobs/": "Banks",
     "https://www.freejobalert.com/railway-jobs/": "Railways",
     "https://www.freejobalert.com/police-defence-jobs/": "Defence",
 }
 
-# Pages with a mix of everything - each link is checked against
-# CATEGORY_KEYWORDS below, and only matches to your 6 focus areas are kept.
 MIXED_PAGES = [
     "https://www.freejobalert.com/latest-notifications/",
     "https://www.freejobalert.com/admit-card/",
 ]
 
 CATEGORY_KEYWORDS = {
-    "SSC": ["ssc", "staff-selection"],
-    "UPSC": ["upsc", "civil-services", "capf", "cds", "nda"],
-    "Railways": ["railway", "rrb", "rrc", "irctc", "ircon", "metro-rail"],
-    "Defence": ["defence", "army", "navy", "air-force", "indian-army",
-                "indian-navy", "coast-guard", "bsf", "crpf", "itbp", "cisf",
-                "police", "ncc"],
-    "Banks": ["bank", "ibps", "sbi", "rbi", "nabard", "sidbi", "cooperative-bank"],
-    "Andhra Pradesh": ["andhra-pradesh", "ap-govt", "appsc", "ap-jobs", "-ap-"],
+    "SSC": ["ssc", "staff-selection", "staff selection"],
+    "UPSC": ["upsc", "civil-services", "civil services", "capf", "cds", "nda"],
+    "Railways": ["railway", "rrb", "rrc", "irctc", "ircon", "metro rail"],
+    "Defence": ["defence", "army", "navy", "air force", "coast guard",
+                "bsf", "crpf", "itbp", "cisf", "police"],
+    "Banks": ["bank", "ibps", "sbi", "rbi", "nabard", "sidbi"],
+    "Andhra Pradesh": ["andhra pradesh", "ap govt", "appsc"],
+}
+
+# Recognized column headers -> normalized field name.
+# FreeJobAlert varies "Bank Name" / "Recruitment Board" / "Organization"
+# across pages, so map several variants to the same field.
+HEADER_MAP = {
+    "post date": "post_date",
+    "bank name": "board",
+    "recruitment board": "board",
+    "organization": "board",
+    "post name": "title",
+    "exam / post name": "title",
+    "exam/post name": "title",
+    "qualification": "qualification",
+    "advt no": "advt_no",
+    "last date": "last_date",
+    "more information": "link",
 }
 
 
@@ -60,10 +76,10 @@ def make_stable_id(url: str) -> str:
     return slug[-80:]
 
 
-def detect_category(url: str, title: str) -> str | None:
-    text = f"{url} {title}".lower()
+def detect_category(text: str) -> str | None:
+    text_lower = text.lower()
     for category, keywords in CATEGORY_KEYWORDS.items():
-        if any(kw in text for kw in keywords):
+        if any(kw in text_lower for kw in keywords):
             return category
     return None
 
@@ -74,80 +90,108 @@ def fetch_page(url: str) -> str:
     return resp.text
 
 
-def extract_links(html: str) -> list:
+def parse_tables(html: str) -> list:
     """
-    NOTE: This uses a generic heuristic (table/list links with reasonably
-    long text). If results look sparse or wrong after your first run,
-    inspect the actual page HTML (right-click a job link -> Inspect) and
-    tell me the surrounding tag/class so I can tighten this selector.
+    Finds every <table> on the page, reads its header row to figure out
+    column order, then extracts each data row as a dict using HEADER_MAP.
+    Rows are skipped if no usable link or title is found.
     """
     soup = BeautifulSoup(html, "html.parser")
-    items = []
-    for link in soup.select("a[href]"):
-        title = link.get_text(strip=True)
-        href = link.get("href", "")
-        if not title or len(title) < 12:
+    rows_out = []
+
+    for table in soup.find_all("table"):
+        header_cells = table.find("tr")
+        if header_cells is None:
             continue
-        if not href.startswith("http"):
-            continue
-        if "freejobalert.com" not in href:
-            continue
-        items.append({"title": title, "url": href})
-    return items
+        headers = [th.get_text(strip=True).lower() for th in header_cells.find_all(["th", "td"])]
+        field_order = [HEADER_MAP.get(h) for h in headers]
+
+        if "title" not in field_order and "link" not in field_order:
+            continue  # not a job table, skip (e.g. a layout table)
+
+        body_rows = table.find_all("tr")[1:]  # skip header row
+        for row in body_rows:
+            cells = row.find_all("td")
+            if len(cells) != len(field_order):
+                continue
+
+            record = {}
+            link_href = None
+            for field, cell in zip(field_order, cells):
+                if field is None:
+                    continue
+                text = cell.get_text(strip=True)
+                record[field] = text
+                a_tag = cell.find("a", href=True)
+                if a_tag and field == "link":
+                    link_href = a_tag["href"]
+
+            if not link_href or "title" not in record or not record["title"]:
+                continue
+
+            record["url"] = link_href
+            rows_out.append(record)
+
+    return rows_out
+
+
+def build_item(record: dict, category: str) -> dict:
+    return {
+        "id": make_stable_id(record["url"]),
+        "title": record.get("title", "").strip(),
+        "url": record["url"],
+        "category": category,
+        "post_date": record.get("post_date", ""),
+        "board": record.get("board", ""),
+        "qualification": record.get("qualification", ""),
+        "advt_no": record.get("advt_no", ""),
+        "last_date": record.get("last_date", ""),
+    }
 
 
 def main():
     all_items = []
     seen_ids = set()
 
-    # 1. Direct-category pages - every matching link gets that category
+    # 1. Direct-category pages
     for url, category in DIRECT_CATEGORY_PAGES.items():
         try:
             html = fetch_page(url)
-            links = extract_links(html)
-            print(f"Fetched {len(links)} links from {url}")
+            records = parse_tables(html)
+            print(f"Parsed {len(records)} table rows from {url}")
         except requests.RequestException as e:
             print(f"Failed to fetch {url}: {e}")
             continue
 
-        for link in links:
-            item_id = make_stable_id(link["url"])
-            if item_id in seen_ids:
+        for record in records:
+            item = build_item(record, category)
+            if item["id"] in seen_ids:
                 continue
-            seen_ids.add(item_id)
-            all_items.append({
-                "id": item_id,
-                "title": link["title"],
-                "url": link["url"],
-                "category": category,
-            })
+            seen_ids.add(item["id"])
+            all_items.append(item)
         time.sleep(REQUEST_DELAY_SECONDS)
 
-    # 2. Mixed pages - filter by keyword to your 6 focus categories only
+    # 2. Mixed pages - keyword-filter to your 6 focus categories only
     for url in MIXED_PAGES:
         try:
             html = fetch_page(url)
-            links = extract_links(html)
-            print(f"Fetched {len(links)} links from {url}")
+            records = parse_tables(html)
+            print(f"Parsed {len(records)} table rows from {url}")
         except requests.RequestException as e:
             print(f"Failed to fetch {url}: {e}")
             continue
 
-        for link in links:
-            category = detect_category(link["url"], link["title"])
+        for record in records:
+            search_text = f"{record.get('title','')} {record.get('board','')} {record['url']}"
+            category = detect_category(search_text)
             if category is None:
-                continue  # not one of your 6 focus categories - skip
-
-            item_id = make_stable_id(link["url"])
-            if item_id in seen_ids:
                 continue
-            seen_ids.add(item_id)
-            all_items.append({
-                "id": item_id,
-                "title": link["title"],
-                "url": link["url"],
-                "category": category,
-            })
+
+            item = build_item(record, category)
+            if item["id"] in seen_ids:
+                continue
+            seen_ids.add(item["id"])
+            all_items.append(item)
         time.sleep(REQUEST_DELAY_SECONDS)
 
     with open("data/raw_today.json", "w", encoding="utf-8") as f:
