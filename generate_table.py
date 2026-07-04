@@ -53,14 +53,16 @@ def generate_table(changes: list, run_time: datetime) -> str:
             continue
         lines.append(f"#### {category}")
         lines.append("")
-        lines.append("| Status | Title | Stage | Detected On | Official Link |")
-        lines.append("|---|---|---|---|---|")
+        lines.append("| Status | Title | Qualification | Last Date | Stage | Detected On | Link |")
+        lines.append("|---|---|---|---|---|---|---|")
         for job in jobs_in_cat:
             emoji = STATUS_EMOJI.get(job["status"], "")
             detected = f"{job.get('last_updated', '')} {job.get('last_updated_time', '')}".strip()
+            qualification = job.get("qualification", "") or "-"
+            last_date = job.get("last_date", "") or "-"
             lines.append(
-                f"| {emoji} {job['status']} | {job['title']} | {job['current_stage']} "
-                f"| {detected} | [Link]({job['official_url']}) |"
+                f"| {emoji} {job['status']} | {job['title']} | {qualification} | {last_date} "
+                f"| {job['current_stage']} | {detected} | [Link]({job['official_url']}) |"
             )
         lines.append("")
 
