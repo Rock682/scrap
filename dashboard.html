@@ -306,11 +306,13 @@ function renderCategories(){
     if(jobs.length === 0) return;
 
     html += `<section class="category"><h2>${cat} <span class="count">${jobs.length} posting${jobs.length>1?'s':''}</span></h2>`;
-    html += `<table><thead><tr><th>Title</th><th>Stage</th><th>First Seen</th><th>Last Updated</th><th></th></tr></thead><tbody>`;
+    html += `<table><thead><tr><th>Title</th><th>Qualification</th><th>Last Date</th><th>Stage</th><th>First Seen</th><th>Last Updated</th><th></th></tr></thead><tbody>`;
 
     jobs.forEach(job => {
       html += `<tr>
         <td>${escapeHtml(job.title)}</td>
+        <td>${escapeHtml(job.qualification || '-')}</td>
+        <td>${escapeHtml(job.last_date || '-')}</td>
         <td><span class="stage">${job.current_stage}</span></td>
         <td>${job.first_seen} ${job.first_seen_time || ''}</td>
         <td>${job.last_updated} ${job.last_updated_time || ''}</td>
