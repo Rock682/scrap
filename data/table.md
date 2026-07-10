@@ -1,7 +1,7 @@
-### Job Alert Changes — Thursday, 09 July 2026 — 05:49 PM IST
+### Job Alert Changes — Friday, 10 July 2026 — 11:56 AM IST
 
 #### Banks
 
 | Status | Title | Qualification | Last Date | Stage | Detected On | Link |
 |---|---|---|---|---|---|---|
-| 🆕 New | Clerk     – 444 Posts | Any Graduate | 10-07-2026 | Notification | 2026-07-09 17:49 | [Link](https://www.freejobalert.com/articles/sangli-dcc-bank-clerk-recruitment-2026-apply-online-for-444-posts-3055245) |
+| 🆕 New | Product Manager     – 1 Posts | MBA/PGDM | 29-07-2026 | Notification | 2026-07-10 11:56 | [Link](https://www.freejobalert.com/articles/sidbi-product-manager-recruitment-2026-apply-online-3057596) |
