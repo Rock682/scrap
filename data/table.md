@@ -1,7 +1,7 @@
-### Job Alert Changes — Monday, 13 July 2026 — 11:22 AM IST
+### Job Alert Changes — Monday, 13 July 2026 — 05:49 PM IST
 
 #### Banks
 
 | Status | Title | Qualification | Last Date | Stage | Detected On | Link |
 |---|---|---|---|---|---|---|
-| 🆕 New | Assistant Vice President     – 5 Posts | B.Tech/B.E, M.E/M.Tech, Any Post Graduate, MBA/PGDM, BCA, MCA, Diploma, CA, ICWA, PGDM | 31-07-2026 | Notification | 2026-07-13 11:22 | [Link](https://www.freejobalert.com/articles/bob-assistant-vice-president-recruitment-2026-apply-online-3057968) |
+| 🆕 New | Business Analyst     – 22 Posts | CA | 04-08-2026 | Notification | 2026-07-13 17:49 | [Link](https://www.freejobalert.com/articles/nabfid-business-analyst-recruitment-2026-walk-in-for-22-posts-3058074) |
