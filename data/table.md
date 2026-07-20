@@ -1,7 +1,7 @@
-### Job Alert Changes — Monday, 20 July 2026 — 11:23 AM IST
+### Job Alert Changes — Monday, 20 July 2026 — 05:30 PM IST
 
 #### Banks
 
 | Status | Title | Qualification | Last Date | Stage | Detected On | Link |
 |---|---|---|---|---|---|---|
-| 🆕 New | PSB Officer | Retired Staff | 31-07-2026 | Notification | 2026-07-20 11:23 | [Link](https://www.freejobalert.com/articles/central-bank-of-india-psb-officer-recruitment-2026-apply-offline-3059284) |
+| 🆕 New | Local Bank Officer     – 545 Posts | Any Graduate | 09-08-2026 | Notification | 2026-07-20 17:30 | [Link](https://www.freejobalert.com/articles/pnb-local-bank-officer-recruitment-2026-apply-online-for-545-posts-3059463) |
