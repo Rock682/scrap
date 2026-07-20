@@ -1,3 +1,7 @@
-### Job Alert Check — Sunday, 19 July 2026 — 04:20 PM IST
+### Job Alert Changes — Monday, 20 July 2026 — 11:23 AM IST
 
-No new updates found this run.
+#### Banks
+
+| Status | Title | Qualification | Last Date | Stage | Detected On | Link |
+|---|---|---|---|---|---|---|
+| 🆕 New | PSB Officer | Retired Staff | 31-07-2026 | Notification | 2026-07-20 11:23 | [Link](https://www.freejobalert.com/articles/central-bank-of-india-psb-officer-recruitment-2026-apply-offline-3059284) |
