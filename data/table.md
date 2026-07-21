@@ -1,7 +1,7 @@
-### Job Alert Changes — Monday, 20 July 2026 — 05:30 PM IST
+### Job Alert Changes — Tuesday, 21 July 2026 — 11:05 AM IST
 
 #### Banks
 
 | Status | Title | Qualification | Last Date | Stage | Detected On | Link |
 |---|---|---|---|---|---|---|
-| 🆕 New | Local Bank Officer     – 545 Posts | Any Graduate | 09-08-2026 | Notification | 2026-07-20 17:30 | [Link](https://www.freejobalert.com/articles/pnb-local-bank-officer-recruitment-2026-apply-online-for-545-posts-3059463) |
+| 🆕 New | Specialist Officers, General Banking Officers and Officers     – 395 Posts | Any Graduate, B.Arch, LLB, CA, M.E/M.Tech | 10-08-2026 | Notification | 2026-07-21 11:05 | [Link](https://www.freejobalert.com/articles/union-bank-of-india-so-recruitment-2026-apply-online-for-395-specialist-officers-general-banking-officers-and-officers-posts-3059262) |
