@@ -1,7 +1,7 @@
-### Job Alert Changes — Tuesday, 21 July 2026 — 04:52 PM IST
+### Job Alert Changes — Wednesday, 22 July 2026 — 11:04 AM IST
 
-#### Defence
+#### Banks
 
 | Status | Title | Qualification | Last Date | Stage | Detected On | Link |
 |---|---|---|---|---|---|---|
-| 🆕 New | SSC (Non-Tech), Women     – 06 Posts | Any Bachelors Degree | 21-08-2026 | Notification | 2026-07-21 16:52 | [Link](https://www.freejobalert.com/articles/indian-army-ncc-special-entry-125-course-women-2027-3059623) |
+| 🆕 New | IT Officer, Agricultural Field Officer and More     – 745 Posts | B.Tech/B.E, LLB, M.A, M.Sc, MBA/PGDM, PG Diploma | 26-07-2026 | Notification | 2026-07-22 11:04 | [Link](https://www.freejobalert.com/articles/ibps-so-recruitment-2026-apply-online-for-745-it-officer-agricultural-field-officer-and-more-posts-3056055) |
