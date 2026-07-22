@@ -1,7 +1,7 @@
-### Job Alert Changes — Wednesday, 22 July 2026 — 11:04 AM IST
+### Job Alert Changes — Wednesday, 22 July 2026 — 04:54 PM IST
 
 #### Banks
 
 | Status | Title | Qualification | Last Date | Stage | Detected On | Link |
 |---|---|---|---|---|---|---|
-| 🆕 New | IT Officer, Agricultural Field Officer and More     – 745 Posts | B.Tech/B.E, LLB, M.A, M.Sc, MBA/PGDM, PG Diploma | 26-07-2026 | Notification | 2026-07-22 11:04 | [Link](https://www.freejobalert.com/articles/ibps-so-recruitment-2026-apply-online-for-745-it-officer-agricultural-field-officer-and-more-posts-3056055) |
+| 🆕 New | Probationary Officer | CA | 29-07-2026 | Notification | 2026-07-22 16:54 | [Link](https://www.freejobalert.com/articles/south-indian-bank-po-recruitment-2026-3059848) |
