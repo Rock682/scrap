@@ -1,7 +1,7 @@
-### Job Alert Changes — Friday, 24 July 2026 — 11:05 AM IST
+### Job Alert Changes — Friday, 24 July 2026 — 04:45 PM IST
 
 #### Banks
 
 | Status | Title | Qualification | Last Date | Stage | Detected On | Link |
 |---|---|---|---|---|---|---|
-| 🆕 New | General Manager     – 01 Posts | CA | 05-08-2026 | Notification | 2026-07-24 11:05 | [Link](https://www.freejobalert.com/articles/iob-general-manager-recruitment-2026-3060070) |
+| 🆕 New | Relationship Manager, Product Specialist and More | Any Graduate, Any Post Graduate | 03-08-2026 | Notification | 2026-07-24 16:45 | [Link](https://www.freejobalert.com/articles/tmb-recruitment-2026-apply-online-for-relationship-manager-product-specialist-and-more-posts-3060180) |
