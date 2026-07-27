@@ -1,3 +1,7 @@
-### Job Alert Check — Monday, 27 July 2026 — 11:34 AM IST
+### Job Alert Changes — Monday, 27 July 2026 — 06:11 PM IST
 
-No new updates found this run.
+#### Banks
+
+| Status | Title | Qualification | Last Date | Stage | Detected On | Link |
+|---|---|---|---|---|---|---|
+| 🆕 New | Customer Service Associate / Clerk | Any Graduate | 21-08-2026 | Notification | 2026-07-27 18:11 | [Link](https://www.freejobalert.com/articles/ibps-clerk-recruitment-2026-apply-online-for-crp-csa-xvi-posts-3060464) |
