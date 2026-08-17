@@ -663,5 +663,12 @@
     "run_datetime_ist": "2026-08-16 15:19:42 UTC+05:30",
     "new_count": 0,
     "update_count": 0
+  },
+  {
+    "run_date": "2026-08-17",
+    "run_time_ist": "08:57",
+    "run_datetime_ist": "2026-08-17 08:57:43 UTC+05:30",
+    "new_count": 0,
+    "update_count": 0
   }
 ]
