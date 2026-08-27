@@ -1,3 +1,7 @@
-### Job Alert Check — Wednesday, 26 August 2026 — 03:34 PM IST
+### Job Alert Changes — Thursday, 27 August 2026 — 06:29 PM IST
 
-No new updates found this run.
+#### Banks
+
+| Status | Title | Qualification | Last Date | Stage | Detected On | Link |
+|---|---|---|---|---|---|---|
+| 🆕 New | Bank Resource Person     – 2 Posts | Other | 08-09-2026 | Notification | 2026-08-27 18:29 | [Link](https://www.freejobalert.com/articles/dmmu-and-drdc-malda-bank-resource-person-recruitment-2026-apply-offline-3064911) |
