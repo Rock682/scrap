@@ -1,3 +1,7 @@
-### Job Alert Check — Tuesday, 15 September 2026 — 07:53 PM IST
+### Job Alert Changes — Wednesday, 16 September 2026 — 01:20 PM IST
 
-No new updates found this run.
+#### Banks
+
+| Status | Title | Qualification | Last Date | Stage | Detected On | Link |
+|---|---|---|---|---|---|---|
+| 🆕 New | Business Development Officer     – 12 Posts | Any Post Graduate, MBA/PGDM | 15-10-2026 | Notification | 2026-09-16 13:20 | [Link](https://www.freejobalert.com/articles/exim-bank-business-development-officer-recruitment-2026-apply-online-for-12-posts-3067808) |
