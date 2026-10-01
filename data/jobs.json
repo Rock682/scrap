@@ -304,44 +304,6 @@
     ]
   },
   {
-    "id": "https-sarkariresult-freejobalert-com",
-    "title": "Sarkari Result",
-    "official_url": "https://sarkariresult.freejobalert.com/",
-    "category": "Banks",
-    "first_seen": "2026-07-03",
-    "first_seen_time": "19:24",
-    "last_updated": "2026-07-03",
-    "last_updated_time": "19:24",
-    "current_stage": "Result",
-    "stage_history": [
-      {
-        "stage": "Result",
-        "date": "2026-07-03",
-        "time": "19:24",
-        "url": "https://sarkariresult.freejobalert.com/"
-      }
-    ]
-  },
-  {
-    "id": "https-www-freejobalert-com-exam-results",
-    "title": "Exam Results",
-    "official_url": "https://www.freejobalert.com/exam-results/",
-    "category": "Banks",
-    "first_seen": "2026-07-03",
-    "first_seen_time": "19:24",
-    "last_updated": "2026-07-03",
-    "last_updated_time": "19:24",
-    "current_stage": "Result",
-    "stage_history": [
-      {
-        "stage": "Result",
-        "date": "2026-07-03",
-        "time": "19:24",
-        "url": "https://www.freejobalert.com/exam-results/"
-      }
-    ]
-  },
-  {
     "id": "https-www-freejobalert-com-cutoff-marks",
     "title": "Cutoff Marks",
     "official_url": "https://www.freejobalert.com/cutoff-marks/",
@@ -376,25 +338,6 @@
         "date": "2026-07-03",
         "time": "19:24",
         "url": "https://www.freejobalert.com/written-marks/"
-      }
-    ]
-  },
-  {
-    "id": "https-www-freejobalert-com-interview-results",
-    "title": "Interview Results",
-    "official_url": "https://www.freejobalert.com/interview-results/",
-    "category": "Banks",
-    "first_seen": "2026-07-03",
-    "first_seen_time": "19:24",
-    "last_updated": "2026-07-03",
-    "last_updated_time": "19:24",
-    "current_stage": "Result",
-    "stage_history": [
-      {
-        "stage": "Result",
-        "date": "2026-07-03",
-        "time": "19:24",
-        "url": "https://www.freejobalert.com/interview-results/"
       }
     ]
   },
