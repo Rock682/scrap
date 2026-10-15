@@ -1,7 +1,7 @@
-### Job Alert Changes — Thursday, 15 October 2026 — 01:09 PM IST
+### Job Alert Changes — Thursday, 15 October 2026 — 07:46 PM IST
 
 #### Banks
 
 | Status | Title | Qualification | Last Date | Stage | Detected On | Link |
 |---|---|---|---|---|---|---|
-| 🆕 New | Chief Compliance Officer     – 1 Posts | Any Graduate | 30-10-2026 | Notification | 2026-10-15 13:09 | [Link](https://www.freejobalert.com/articles/punjab-sind-bank-chief-compliance-officer-recruitment-2026-apply-online-3073649) |
+| 🆕 New | Pharmacist     – 22 Posts | B.Pharma, D.Pharm | 03-11-2026 | Notification | 2026-10-15 19:46 | [Link](https://www.freejobalert.com/articles/rbi-mumbai-pharmacist-recruitment-2026-3073857) |
