@@ -1,7 +1,7 @@
-### Job Alert Changes — Friday, 16 October 2026 — 07:35 PM IST
+### Job Alert Changes — Saturday, 17 October 2026 — 12:37 PM IST
 
-#### Railways
+#### Banks
 
 | Status | Title | Qualification | Last Date | Stage | Detected On | Link |
 |---|---|---|---|---|---|---|
-| 🆕 New | Trade, Graduate and Technician Apprentice     – 70 Posts | Any Graduate, B.Tech/B.E, Diploma, ITI | 10-11-2026 | Notification | 2026-10-16 19:35 | [Link](https://www.freejobalert.com/articles/kochi-metro-to-recruit-70-apprentice-3074148) |
+| 🆕 New | Junior Officer (Operations) | Any Graduate | 27-10-2026 | Notification | 2026-10-17 12:37 | [Link](https://www.freejobalert.com/articles/south-indian-bank-junior-officer-recruitment-2026-3074295) |
