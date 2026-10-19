@@ -1,7 +1,7 @@
-### Job Alert Changes — Sunday, 18 October 2026 — 06:54 PM IST
+### Job Alert Changes — Monday, 19 October 2026 — 01:30 PM IST
 
 #### Banks
 
 | Status | Title | Qualification | Last Date | Stage | Detected On | Link |
 |---|---|---|---|---|---|---|
-| 🆕 New | GM & Chief AI Officer, DGM and More     – 6 Posts | B.Tech/B.E, Any Graduate, MBA/PGDM | 09-11-2026 | Notification | 2026-10-18 18:54 | [Link](https://www.freejobalert.com/articles/sbi-recruitment-2026-gm-chief-ai-officer-dgm-3074384) |
+| 🆕 New | Credit Trainer     – 1 Posts | Other | 31-10-2026 | Notification | 2026-10-19 13:30 | [Link](https://www.freejobalert.com/articles/tmb-credit-trainer-recruitment-2026-3074390) |
